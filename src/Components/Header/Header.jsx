@@ -7,7 +7,6 @@ function Header() {
         document.documentElement.classList.toggle("dark");
         setTheme((prev) => (prev === "dark" ? "light" : "dark"));
     }
-    useEffect(() => (console.log(theme)), [theme])
     return (
         <header className='dark:bg-gray-800 bg-cyan-900 text-white h-14 w-screen flex justify-between items-center'>
             <div className='w-full flex justify-center items-center mr-8'>

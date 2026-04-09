@@ -25,7 +25,6 @@ function Home() {
     }
 
     useEffect(() => {
-        console.log("player 1 = ", name1, " player 2 = ", name2);
     }, [name1, name2, setName1, setName2]);
 
     const handelClick = (index) => {
@@ -61,20 +60,16 @@ function Home() {
     }
 
     useEffect(() => {
-        console.log(winner);
         if (winner === null) return;
-        console.log(winner);
         if (winner === "x" || winner === "X") {
             const player = [...point];
             player[0]++;
             setPoint(player);
-            console.log(winner);
 
         } else if (winner === "O" || winner === "o") {
             const player = [...point];
             player[1]++;
             setPoint(player);
-            console.log(winner);
 
         }
     }, [winner])
@@ -115,7 +110,7 @@ function Home() {
 
                 <button className=' relative border-2 border-white bg-blue-600 hover:bg-blue-800 text-white text-md z-0 rounded-md dark:bg-indigo-600 dark:hover:bg-indigo-900 px-5 py-3 transition-[all_0.3s_ease] after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-0 after:rounded dark:after:bg-indigo-800 after:transition-[all_0.3s_ease]  hover:after:w-full active:bg-gray-300 active:text-black hover:scale-105 active:scale-95 '
                     onClick={resetPoint}
-                ><i className="fa-solid fa-rotate-right"></i> Reset Points</button>
+                >Reset Points</button>
 
 
 
